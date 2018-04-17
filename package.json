@@ -1,0 +1,36 @@
+{
+  "name": "matches-viewer",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "history": "^4.7.2",
+    "material-ui": "^0.20.0",
+    "moment": "^2.22.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts": "1.1.4",
+    "react-tap-event-plugin": "^3.0.2",
+    "redux": "^3.7.2",
+    "redux-api-middleware": "^2.3.0",
+    "redux-devtools-extension": "^2.13.2",
+    "reselect": "^3.0.1"
+  },
+  "scripts": {
+    "start-api": "node ./src/backend/api/index.js",
+    "start-proxy": "node ./src/backend/proxy/index.js",
+    "start": "npm-run-all -p start-js start-api",
+    "start-js": "react-scripts start",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "postinstall": "cd ./src/backend/api && npm i"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.2"
+  },
+  "proxy": "http://localhost:3001/"
+}
